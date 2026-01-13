@@ -1,27 +1,23 @@
+import './App.css';
+import { Card } from './Card';
 
-import React from 'react';
-
-const LandingPage = () => {
+function LandingPage() {
   return (
-    <div className="landing-page">
-      <h1>My Landing Page</h1>
-      <div className="user-info">
-        <h2>User Information</h2>
-        <p><strong>Nickname:</strong> [Cruciater]</p>
-        <p><strong>Email:</strong> [Your Email]</p>
-        <p><strong>Country:</strong> [Your Country]</p>
-      </div>
-      <div className="tech-stack">
-        <h2>Tech Stack</h2>
-        <div className="icons">
-          {/* Add your tech stack icons here */}
-          <span>Icon 1</span>
-          <span>Icon 2</span>
-          <span>Icon 3</span>
-        </div>
+    <div>
+      <h1>My Portfolio</h1>
+      <div className="card-container">
+        <Card to="/project1">
+          <h2>Project 1</h2>
+        </Card>
+        <Card to="/project2">
+          <h2>Project 2</h2>
+        </Card>
+        <Card to="/project3">
+          <h2>Project 3</h2>
+        </Card>
       </div>
     </div>
   );
-};
+}
 
 export default LandingPage;
