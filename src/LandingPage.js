@@ -7,7 +7,7 @@ const LandingPage = () => {
       <h1>My Landing Page</h1>
       <div className="user-info">
         <h2>User Information</h2>
-        <p><strong>Nickname:</strong> [Your Nickname]</p>
+        <p><strong>Nickname:</strong> [Cruciater]</p>
         <p><strong>Email:</strong> [Your Email]</p>
         <p><strong>Country:</strong> [Your Country]</p>
       </div>
