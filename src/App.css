@@ -1,20 +1,53 @@
 
+@font-face {
+  font-family: 'PressStart2P-vaV7';
+  src: local('PressStart2P-vaV7'), url(../font/PressStart2P-vaV7.ttf) format('truetype');
+  font-style:normal;
+  font-weight:normal;
+}
+
+html {
+  font-family: PressStart2P-vaV7 , sans-serif ;
+  text-align: center;
+  background-color: black;
+  color : whitesmoke;
+}
+
 .App {
   text-align: center;
 }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  text-decoration: none;
-  color: inherit;
-  width: 200px;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
