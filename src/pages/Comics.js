@@ -29,7 +29,7 @@ function Comics() {
               {comic.pages.length > 0 ? (
                 <button className="comic-read-btn">{'> LEGGI'}</button>
               ) : (
-                <span className="comic-soon">// COMING SOON</span>
+                <span className="comic-soon">{'// COMING SOON'}</span>
               )}
             </div>
           </div>
