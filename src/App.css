@@ -1,53 +1,68 @@
-
 @font-face {
-  font-family: 'PressStart2P-vaV7';
-  src: local('PressStart2P-vaV7'), url(../font/PressStart2P-vaV7.ttf) format('truetype');
-  font-style:normal;
-  font-weight:normal;
+  font-family: 'PressStart2P';
+  src: local('PressStart2P-vaV7'),
+       url(../font/PressStart2P-vaV7.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --green:      #00ff41;
+  --cyan:       #00e5ff;
+  --bg:         #0a0a0a;
+  --text:       #e0e0e0;
+  --text-dim:   #555;
+  --border:     #1a1a1a;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-  font-family: PressStart2P-vaV7 , sans-serif ;
-  text-align: center;
-  background-color: black;
-  color : whitesmoke;
+  font-family: 'PressStart2P', monospace;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scanlines overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.045) 2px,
+    rgba(0, 0, 0, 0.045) 4px
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--green);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  /* background-color: #282c34; */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

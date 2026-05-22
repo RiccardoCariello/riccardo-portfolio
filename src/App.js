@@ -1,20 +1,21 @@
-
 import './App.css';
-import LandingPage from './LandingPage';
-import Project1 from './Project1';
-import Project2 from './Project2';
-import Project3 from './Project3';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Devlog from './pages/Devlog';
+import DevlogPost from './pages/DevlogPost';
+import Comics from './pages/Comics';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/project1" element={<Project1 />} />
-          <Route path="/project2" element={<Project2 />} />
-          <Route path="/project3" element={<Project3 />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/devlog" element={<Devlog />} />
+          <Route path="/devlog/:slug" element={<DevlogPost />} />
+          <Route path="/comics" element={<Comics />} />
         </Routes>
       </div>
     </Router>

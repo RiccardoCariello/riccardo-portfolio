@@ -1,0 +1,192 @@
+.home {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ── Hero ─────────────────────────────────── */
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-tag {
+  color: #00ff41;
+  font-size: 0.55rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.8rem;
+}
+
+.hero-name {
+  font-size: clamp(1.1rem, 3.5vw, 2.2rem);
+  color: #fff;
+  letter-spacing: 5px;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+  white-space: pre;
+}
+
+/* glitch pseudo-elements — only active once typing is done */
+.hero-name.glitch::before,
+.hero-name.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-name.glitch::before {
+  left: 3px;
+  color: #fff;
+  text-shadow: -3px 0 #00e5ff;
+  animation: glitch-top 5s infinite;
+  clip-path: polygon(0 20%, 100% 20%, 100% 42%, 0 42%);
+}
+
+.hero-name.glitch::after {
+  left: -3px;
+  color: #fff;
+  text-shadow: 3px 0 #00ff41;
+  animation: glitch-bot 5s infinite;
+  clip-path: polygon(0 62%, 100% 62%, 100% 82%, 0 82%);
+}
+
+@keyframes glitch-top {
+  0%, 85%, 100% { transform: translate(0); opacity: 0; }
+  87%           { transform: translate(-5px, 1px); opacity: 1; }
+  89%           { transform: translate(5px, -1px); opacity: 1; }
+  91%           { transform: translate(-3px, 0);   opacity: 1; }
+  93%           { opacity: 0; }
+}
+
+@keyframes glitch-bot {
+  0%, 85%, 100% { transform: translate(0); opacity: 0; }
+  88%           { transform: translate(5px, 1px);  opacity: 1; }
+  90%           { transform: translate(-5px, -1px); opacity: 1; }
+  92%           { transform: translate(3px, 0);    opacity: 1; }
+  94%           { opacity: 0; }
+}
+
+.cursor {
+  color: #00ff41;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero-sub {
+  margin-top: 2rem;
+  font-size: 0.5rem;
+  color: #00e5ff;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+/* ── Terminal block ───────────────────────── */
+.bio {
+  margin: 1.5rem 0 3rem;
+}
+
+.terminal-block {
+  border: 1px solid #1c1c1c;
+  border-radius: 4px;
+  background: #080808;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 255, 65, 0.04);
+}
+
+.terminal-header {
+  background: #111;
+  padding: 0.55rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.dot.red    { background: #ff5f57; }
+.dot.yellow { background: #febc2e; }
+.dot.green  { background: #28c840; }
+
+.terminal-title {
+  margin-left: 0.5rem;
+  font-size: 0.45rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.terminal-body {
+  padding: 1.4rem 1.6rem;
+  font-size: 0.58rem;
+  line-height: 1.9;
+}
+
+.prompt {
+  color: #00ff41;
+}
+
+.cmd {
+  color: #ddd;
+}
+
+.output {
+  color: #777;
+  padding-left: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+.blink-line {
+  color: #00ff41;
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Tech stack ───────────────────────────── */
+.tech {
+  margin-top: 1rem;
+}
+
+.section-title {
+  font-size: 0.62rem;
+  color: #00ff41;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.35);
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-tag {
+  border: 1px solid #00ff41;
+  color: #00ff41;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.48rem;
+  letter-spacing: 2px;
+  cursor: default;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 255, 65, 0.08);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.25), inset 0 0 8px rgba(0, 255, 65, 0.06);
+}
