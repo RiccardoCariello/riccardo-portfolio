@@ -1,0 +1,147 @@
+.comics-page {
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* reuse .page-header styles from Devlog.css
+   — defined here too so Comics is self-contained */
+.comics-page .page-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid #111;
+  margin-bottom: 2.5rem;
+}
+
+.comics-page .page-header-tag {
+  color: #00e5ff;
+  font-size: 0.52rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.comics-page .page-title {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  color: #fff;
+  letter-spacing: 6px;
+  margin-bottom: 1rem;
+}
+
+.comics-page .page-desc {
+  font-size: 0.55rem;
+  color: #555;
+  line-height: 2.2;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Grid ─────────────────────────────────── */
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.comic-card {
+  border: 1px solid #161616;
+  background: #080808;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.comic-card:hover {
+  border-color: #00e5ff;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.08);
+}
+
+/* ── Cover ────────────────────────────────── */
+.comic-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #141414;
+  overflow: hidden;
+}
+
+.comic-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comic-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #090909,
+    #090909 12px,
+    #0c0c0c 12px,
+    #0c0c0c 24px
+  );
+}
+
+.cover-ph-icon {
+  font-size: 3.5rem;
+  color: #1e1e1e;
+}
+
+/* ── Info ─────────────────────────────────── */
+.comic-info {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.comic-title {
+  font-size: 0.62rem;
+  color: #ddd;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.comic-date {
+  font-size: 0.44rem;
+  color: #363636;
+  letter-spacing: 1px;
+  margin-bottom: 0.9rem;
+}
+
+.comic-desc {
+  font-size: 0.58rem;
+  color: #444;
+  line-height: 2.1;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1.1rem;
+}
+
+.comic-read-btn {
+  background: transparent;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  font-family: 'PressStart2P', monospace;
+  font-size: 0.48rem;
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.comic-read-btn:hover {
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+}
+
+.comic-soon {
+  font-size: 0.44rem;
+  color: #2a2a2a;
+  letter-spacing: 3px;
+  font-family: 'Courier New', monospace;
+}
